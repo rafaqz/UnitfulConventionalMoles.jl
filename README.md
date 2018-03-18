@@ -1,8 +1,8 @@
 # UnitfulConventionalMoles
 
 This module defines molecular mass units with conventional molecular weights,
-using Unitful.jl and UnitfulMoles.jl.
-
+using [Unitful.jl](https://github.com/ajkeller34/Unitful.jl), and
+[UnitfulMoles.jl](https://github.com/rafaqz/UnitfulMoles.jl).
 
 Units are available as u"mol{X}":
 
