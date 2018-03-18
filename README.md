@@ -25,6 +25,18 @@ julia> uconvert(u"kg", 200u"molC")
 2.4021999999999997 kg 
 ```
 
+Create custom compounds with the @compound macro:
+```
+julia> @compound H 2 O
+mol(H2O)
+```
+
+Molecular weight is calculated automatically:
+```
+julia> uconvert(u"g", 10molH2O)
+180.15 g
+```
+
 Atomic weights taken from:
 
 *Atomic weights of the elements 2013 (IUPAC Technical  Report)*
