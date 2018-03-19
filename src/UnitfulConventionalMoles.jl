@@ -2,7 +2,7 @@ module UnitfulConventionalMoles
 
 using Unitful
 using UnitfulMoles
-export @u_str
+export @u_str, @mol, @compound, uconvert
 
 # Atomic weights taken from:
 
