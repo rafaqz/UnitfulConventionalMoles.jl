@@ -2,7 +2,7 @@ module UnitfulConventionalMoles
 
 using Unitful
 using UnitfulMoles
-export @u_str, @mol, @compound, uconvert
+export @u_str, @mol, @xmol, @unit, @compound, uconvert
 
 # Atomic weights taken from:
 
@@ -178,6 +178,7 @@ export @u_str, @mol, @compound, uconvert
 # bismuth* 83
 @mol Bi 208.98
 
+# Allow precompile, and resister mol units with u_str macro.
 const localunits = Unitful.basefactors
 function __init__()
     merge!(Unitful.basefactors, localunits)

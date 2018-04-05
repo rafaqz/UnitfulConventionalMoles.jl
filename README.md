@@ -13,11 +13,9 @@ using UnitfulConventionalMoles
 2 mol(Fe) 
 ```
 
-Conversion to grams using uconvert from Unitful:
+Conversion to grams using uconvert:
 
 ```
-using Unitful
-
 julia> uconvert(u"g", 5u"molFe")                                             
 279.225 g 
 
