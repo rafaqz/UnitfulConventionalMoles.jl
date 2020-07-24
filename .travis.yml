@@ -6,7 +6,7 @@ os:
   - windows
 
 julia:
-  - 0.6
+  - 1
   - nightly
 
 notifications:
@@ -17,8 +17,8 @@ jobs:
   - julia: nightly
 
 script:
-  - julia --color=yes -e 'Pkg.clone("https://github.com/rafaqz/UnitfulMoles.jl.git"); Pkg.build("UnitfulMoles")'
-  - julia -e 'Pkg.clone(pwd()); Pkg.build("UnitfulConventionalMoles"); Pkg.test("UnitfulConventionalMoles"; coverage=true)'
+  - julia -e 'using Pkg; Pkg.add(PackageSpec(url="https://github.com/rafaqz/UnitfulConventionalMoles.jl"))'
+  - julia -e 'using Pkg; Pkg.build(); Pkg.test(coverage=true)'
 
 after_success:
 - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
