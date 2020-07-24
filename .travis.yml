@@ -17,7 +17,7 @@ jobs:
   - julia: nightly
 
 script:
-  - julia -e 'using Pkg; Pkg.add(PackageSpec(url="https://github.com/rafaqz/UnitfulConventionalMoles.jl"))'
+  - julia -e 'using Pkg; Pkg.add(PackageSpec(url="https://github.com/rafaqz/UnitfulMoles.jl"))'
   - julia -e 'using Pkg; Pkg.build(); Pkg.test(coverage=true)'
 
 after_success:
